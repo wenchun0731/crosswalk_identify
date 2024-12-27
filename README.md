@@ -41,11 +41,11 @@
 ### 七、找出輪廓四邊角座標
 拿出剛才計算出來的行人穿越線輪廓座標~將四個座標依x軸排序，前兩個點座標放入下線的點集合，後兩個點放入上線點集合。
 <div align=center>
- <img src='up_and_down_img.png' width='400px'>
+ <img src='up_ang_down_img.png' width='400px'>
 </div>
 
 ### 八、找出行人穿越線邊界
 將上線及下線的點集合找出擬合直線，就是行人穿越線的邊界啦 ~ 只要有了這兩條線的斜率與截距，未禮讓行人違規系統就完成一半了~
 <div align=center>
- <img src='up_ang_down_line_img.png' width='400px'>
+ <img src='up_and_down_line_img.png' width='400px'>
 </div>
