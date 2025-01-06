@@ -5,7 +5,7 @@
 ### 一、原圖
 繼續看下去，讓我們找出這張圖片裡斑馬線的邊界八:)
 <div align=center>
- <img src='original_img.png' width='400px'>
+ <img src='src/original_img.png' width='400px'>
 </div>
 
 ### 二、將圖像灰階化
@@ -16,7 +16,7 @@ def opencv_gray(self):
     return gray_img
 ```
 <div align=center>
- <img src='gray_img.png' width='400px'>
+ <img src='src/gray_img.png' width='400px'>
 </div>
 
 ### 三、將圖像二值化
@@ -29,7 +29,7 @@ def opencv_binary(self,image):
     return binary_image
 ```
 <div align=center>
- <img src='binary_img.png' width='400px'>
+ <img src='src/binary_img.png' width='400px'>
 </div>
 
 ### 四、找出行人穿越線的輪廓與中心點
@@ -64,7 +64,7 @@ def opencv_contours(self,image):
     return point_all,approx_all
 ```
 <div align=center>
- <img src='contours_img.png' width='400px'>
+ <img src='src/contours_img.png' width='400px'>
 </div>
 
 ### 五、過濾不要的中心點與輪廓
@@ -105,26 +105,26 @@ class find_up_and_low_slope:
       return slope,intercept
 ```
 <div align=center>
- <img src='point_img.png' width='400px'>
+ <img src='src/point_img.png' width='400px'>
 </div>
 
 ### 六、劃出中心點的擬合直線
 計算所有中心點的擬合直線，計算擬合直線的斜率，以斜率決定要以x或y軸來區分上下線，斜率絕對值小於0.3以y軸區分。像以這張圖片，他的擬合直線斜率大於0趨近於1，所以以x軸區分上下線。
 
 <div align=center>
- <img src='line_img.png' width='400px'>
+ <img src='src/line_img.png' width='400px'>
 </div>
 
 ### 七、找出輪廓四邊角座標
 拿出剛才計算出來的行人穿越線輪廓座標~將四個座標依x軸排序，前兩個點座標放入下線的點集合，後兩個點放入上線點集合。
 <div align=center>
- <img src='up_ang_down_img.png' width='400px'>
+ <img src='src/up_ang_down_img.png' width='400px'>
 </div>
 
 ### 八、找出行人穿越線邊界
 將上線及下線的點集合找出擬合直線，就是行人穿越線的邊界啦 ~ 只要有了這兩條線的斜率與截距，未禮讓行人違規系統就完成一半了~
 <div align=center>
- <img src='up_and_down_line_img.png' width='400px'>
+ <img src='src/up_and_down_line_img.png' width='400px'>
 </div>
 
 ```Python
@@ -154,9 +154,9 @@ class find_up_and_low_slope:
 
 ### 九、結果
 此方法相同參數可使用在不同的路口及角度。下圖是四個不同路口的辨識結果。
-|<img src='example.png' width='400px'>|<img src='example2.png' width='400px'>|
+|<img src='src/example.png' width='400px'>|<img src='src/example2.png' width='400px'>|
 |-------------------------------------|-------------------------|
-|<img src='example3.png' width='400px'>|<img src='example4.png' width='400px'>| 
+|<img src='src/example3.png' width='400px'>|<img src='src/example4.png' width='400px'>| 
 
 可以從結果看到，對於斑馬線辨識有兩大限制：
 1. 角度夠高：要確定後方較遠的斑馬線能夠有更大的面積，如果角度太斜，後方的斑馬線的輪廓沒有辦法辨識成功(我們在路邊拍攝時，手伸很高舉著超長的自拍桿拍的，才能有更好的辨識效果，常常被路人盯著看@@)
