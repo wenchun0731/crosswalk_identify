@@ -1,6 +1,6 @@
 # crosswalk_identify
 ## 斑馬線辨識系統
-* #### 斑馬線辨識系統介紹簡報：[行人穿越線辨識簡報.pdf]()
+* #### 斑馬線辨識系統介紹簡報：[行人穿越線辨識簡報.pdf](https://github.com/wenchun0731/crosswalk_identify/blob/main/%E8%A1%8C%E4%BA%BA%E7%A9%BF%E8%B6%8A%E7%B7%9A%E8%BE%A8%E8%AD%98%E7%B0%A1%E5%A0%B1.pdf)
 * #### 研究目標：為了建構未禮讓行人違規系統。使用OpenCV結合Python進行影像處理，以找出行人穿越線邊界。
 * #### 研究展望：本系統能夠同時使用在不同角度以及不同路口，為了達成這個展望，必須減少固定參數的使用
 ### 一、原圖
